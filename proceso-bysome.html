@@ -1,0 +1,159 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Portafolio — Proceso: video Bysome</title>
+  <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+  <header class="site-header">
+    <div class="wrap">
+      <h1>Portafolio</h1>
+      <p class="tagline">Procesos y productos · Diseño interactivo</p>
+      <nav class="header-nav">
+        <a href="index.html">← Plan del video Bysome</a>
+      </nav>
+    </div>
+  </header>
+
+  <main class="main wrap">
+    <section class="intro">
+      <h2>Proceso de creación — Video Bysome</h2>
+      <p class="short-title">Bike-Soccer-Meditation · Long Take 2 min</p>
+      <p class="lead">Timeline del proceso: cada paso queda documentado con <strong>texto</strong>, <strong>imágenes</strong> o <strong>vídeos cortos</strong> que explican cómo se construyó este producto.</p>
+    </section>
+
+    <div class="timeline">
+      <!-- ——— Momento 1: ejemplo con los 3 elementos ——— -->
+      <article class="timeline-item">
+        <header class="timeline-item-header">
+          <span class="timeline-marker" aria-hidden="true"></span>
+          <h3 class="timeline-item-title">Ideación y regla de tercios</h3>
+        </header>
+        <div class="timeline-item-body">
+          <div class="timeline-text">
+            <p><strong>¿Qué es la regla de los tercios?</strong> Es una guía de composición que divide el encuadre en nueve partes iguales: dos líneas horizontales y dos verticales, trazadas a un tercio y a dos tercios del ancho y del alto. Los cuatro puntos donde se cruzan esas líneas se llaman <em>puntos fuertes</em> o <em>puntos de interés</em>.</p>
+            <p><strong>¿Qué se busca con ella?</strong> Ubicar los elementos importantes de la escena (el sujeto, el horizonte, un objeto) sobre esas líneas o en esos puntos, en lugar de centrarlos. Así la imagen o el plano ganan equilibrio, tensión visual y sensación de orden, y se evita una composición estática o aburrida. En el video Bysome la uso para encuadrar bien la bici, la pelota y la figura en el parque.</p>
+          </div>
+          <div class="timeline-carousel" role="region" aria-label="Carrusel: regla de los tercios">
+            <div class="timeline-carousel-track" id="carousel-regla-tercios">
+              <figure class="timeline-carousel-slide">
+                <img src="assets/regla-tercios.png" alt="Diagrama de la regla de los tercios: cuadrícula 3×3 con cuatro puntos de interés marcados en rojo sobre fondo gris.">
+                <figcaption>Regla de los tercios: cuadrícula y puntos fuertes donde conviene colocar el sujeto o el horizonte.</figcaption>
+              </figure>
+              <figure class="timeline-carousel-slide">
+                <img src="assets/regla-tercios-ejemplo.png" alt="Ejemplo en escena real: mujer con cámara y estatua de bronce encuadrados sobre la cuadrícula; la cámara y el casco de la estatua coinciden con los puntos fuertes.">
+                <figcaption>Ejemplo aplicado: sujetos alineados con las líneas y los puntos de interés (cámara y estatua en los cruces).</figcaption>
+              </figure>
+            </div>
+            <div class="timeline-carousel-nav">
+              <button type="button" class="carousel-btn carousel-prev" aria-label="Imagen anterior" onclick="moveCarousel('carousel-regla-tercios', -1)">← Anterior</button>
+              <button type="button" class="carousel-btn carousel-next" aria-label="Siguiente imagen" onclick="moveCarousel('carousel-regla-tercios', 1)">Siguiente →</button>
+            </div>
+            <div class="timeline-carousel-dots" aria-hidden="true">
+              <button type="button" class="carousel-dot carousel-dot-active" aria-label="Ir a imagen 1" onclick="goCarouselSlide('carousel-regla-tercios', 0)"></button>
+              <button type="button" class="carousel-dot" aria-label="Ir a imagen 2" onclick="goCarouselSlide('carousel-regla-tercios', 1)"></button>
+            </div>
+          </div>
+          <div class="timeline-video">
+            <div class="timeline-video-placeholder">Vídeo corto (placeholder)</div>
+            <p class="timeline-video-caption">Descripción breve del vídeo si aplica.</p>
+          </div>
+        </div>
+      </article>
+
+      <!-- ——— Momento 2: solo texto ——— -->
+      <article class="timeline-item">
+        <header class="timeline-item-header">
+          <span class="timeline-marker" aria-hidden="true"></span>
+          <h3 class="timeline-item-title">Título del momento o acción</h3>
+        </header>
+        <div class="timeline-item-body">
+          <div class="timeline-text">
+            <p>En algunos momentos del proceso solo querrás escribir: decisiones, reflexiones, lo que aprendiste. No es obligatorio incluir imagen o vídeo en cada paso.</p>
+          </div>
+        </div>
+      </article>
+
+      <!-- ——— Momento 3: texto + imágenes ——— -->
+      <article class="timeline-item">
+        <header class="timeline-item-header">
+          <span class="timeline-marker" aria-hidden="true"></span>
+          <h3 class="timeline-item-title">Otra acción (ej. plantilla cortada)</h3>
+        </header>
+        <div class="timeline-item-body">
+          <div class="timeline-text">
+            <p>Descripción de lo que hiciste en este paso.</p>
+          </div>
+          <div class="timeline-images">
+            <figure>
+              <div class="timeline-img-placeholder">Imagen 1</div>
+              <figcaption>Pie opcional</figcaption>
+            </figure>
+            <figure>
+              <div class="timeline-img-placeholder">Imagen 2</div>
+              <figcaption>Pie opcional</figcaption>
+            </figure>
+          </div>
+        </div>
+      </article>
+
+      <!-- ——— Momento 4: texto + vídeo ——— -->
+      <article class="timeline-item">
+        <header class="timeline-item-header">
+          <span class="timeline-marker" aria-hidden="true"></span>
+          <h3 class="timeline-item-title">Grabación o prueba</h3>
+        </header>
+        <div class="timeline-item-body">
+          <div class="timeline-text">
+            <p>Cuando tengas un vídeo corto del proceso (backstage, prueba de encuadre, etc.), lo colocas aquí. Puedes usar <code>&lt;video&gt;</code> con un archivo local o enlazar YouTube/Vimeo embebido.</p>
+          </div>
+          <div class="timeline-video">
+            <div class="timeline-video-placeholder">Vídeo (aquí irá &lt;video&gt; o iframe)</div>
+            <p class="timeline-video-caption">Ej.: «Prueba de encuadre con la plantilla en el celular».</p>
+          </div>
+        </div>
+      </article>
+
+      <!-- A partir de aquí puedes duplicar .timeline-item y rellenar con tu contenido real -->
+    </div>
+  </main>
+
+  <footer class="site-footer">
+    <div class="wrap">
+      <p><a href="index.html">Volver al plan del video Bysome</a></p>
+    </div>
+  </footer>
+  <script>
+    function moveCarousel(trackId, direction) {
+      var track = document.getElementById(trackId);
+      if (!track) return;
+      var slideWidth = track.offsetWidth;
+      track.scrollBy({ left: slideWidth * direction, behavior: 'smooth' });
+      setTimeout(function() { updateCarouselDots(trackId); }, 400);
+    }
+    function goCarouselSlide(trackId, index) {
+      var track = document.getElementById(trackId);
+      if (!track) return;
+      var slide = track.children[index];
+      if (slide) slide.scrollIntoView({ behavior: 'smooth', block: 'nearest', inline: 'start' });
+      setTimeout(function() { updateCarouselDots(trackId); }, 400);
+    }
+    function updateCarouselDots(trackId) {
+      var track = document.getElementById(trackId);
+      if (!track) return;
+      var region = track.closest('.timeline-carousel');
+      if (!region) return;
+      var dots = region.querySelectorAll('.carousel-dot');
+      var slideWidth = track.offsetWidth;
+      var index = Math.round(track.scrollLeft / slideWidth);
+      index = Math.max(0, Math.min(index, dots.length - 1));
+      dots.forEach(function(dot, i) { dot.classList.toggle('carousel-dot-active', i === index); });
+    }
+    document.getElementById('carousel-regla-tercios').addEventListener('scroll', function() {
+      updateCarouselDots('carousel-regla-tercios');
+    });
+  </script>
+</body>
+</html>
